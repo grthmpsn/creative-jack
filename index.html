@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Creative Process Digital — AI-Powered Digital Apprenticeships</title>
+  <title>Creative Process Digital — Government-Funded Digital Apprenticeships</title>
   <meta name="description" content="Government-funded digital apprenticeships that upskill your team or bring in new talent. Fully funded training worth £11,000 per employee. 92% employer retention.">
 
   <!-- Open Graph -->
@@ -56,8 +56,8 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/homepage-custom.css">
 
-  <!-- Preload hero image -->
-  <link rel="preload" as="image" href="assets/images/hero-bg.webp" type="image/webp">
+  <!-- Preload hero video poster -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1920&q=80&auto=format" type="image/jpeg">
 
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-045R4VC9S4"></script>
@@ -150,14 +150,22 @@
        SECTION 2 — HERO
        ============================================ -->
   <section id="hero" class="relative min-h-[600px] lg:min-h-[700px] flex items-center overflow-hidden" aria-labelledby="hero-heading">
-    <!-- Background image -->
+    <!-- Background video + fallback image -->
     <div class="absolute inset-0">
       <div class="absolute inset-0 bg-cpd-navy">
-        <!-- Replace with actual hero image -->
-        <img src="assets/images/hero-bg.webp" alt="" width="1920" height="1080" class="w-full h-full object-cover opacity-40" fetchpriority="high">
+        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1920&q=80&auto=format" alt="" width="1920" height="1080" class="w-full h-full object-cover" fetchpriority="high" id="hero-poster">
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover" poster="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1920&q=80&auto=format" id="hero-video">
+          <source src="https://videos.pexels.com/video-files/6963744/6963744-uhd_2560_1440_25fps.mp4" type="video/mp4">
+        </video>
       </div>
-      <div class="absolute inset-0 bg-cpd-navy/80"></div>
+      <!-- Gradient overlay for readability -->
+      <div class="absolute inset-0 bg-gradient-to-r from-cpd-navy/90 via-cpd-navy/80 to-cpd-navy/60"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-cpd-navy/40 via-transparent to-cpd-navy/30"></div>
     </div>
+
+    <!-- Decorative floating shapes -->
+    <div class="absolute top-20 right-[10%] w-72 h-72 bg-cpd-blue/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 left-[5%] w-96 h-96 bg-cpd-amber/5 rounded-full blur-3xl"></div>
 
     <!-- Content -->
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
@@ -170,7 +178,7 @@
 
       <!-- Headline -->
       <h1 id="hero-heading" class="font-heading font-extrabold text-white text-[36px] lg:text-[56px] leading-[1.1] max-w-3xl mb-6">
-        Build your digital team — at no cost to you.
+        Build your <span id="rotating-word" class="text-cpd-amber inline-block min-w-[180px] lg:min-w-[280px]"></span><br class="hidden sm:inline"> team — at no cost to you.
       </h1>
 
       <!-- Sub-copy -->
@@ -213,16 +221,69 @@
       </p>
     </div>
     <div class="logo-marquee-wrapper">
-      <div class="logo-marquee flex items-center gap-12 lg:justify-center">
-        <!-- Placeholder logos — replace with real employer logos -->
-        <div class="flex-shrink-0 w-[120px] h-[40px] bg-cpd-divider rounded opacity-60" role="img" aria-label="Employer logo"></div>
-        <div class="flex-shrink-0 w-[100px] h-[40px] bg-cpd-divider rounded opacity-60" role="img" aria-label="Employer logo"></div>
-        <div class="flex-shrink-0 w-[130px] h-[40px] bg-cpd-divider rounded opacity-60" role="img" aria-label="Employer logo"></div>
-        <div class="flex-shrink-0 w-[110px] h-[40px] bg-cpd-divider rounded opacity-60" role="img" aria-label="Employer logo"></div>
-        <div class="flex-shrink-0 w-[120px] h-[40px] bg-cpd-divider rounded opacity-60" role="img" aria-label="Employer logo"></div>
-        <div class="flex-shrink-0 w-[100px] h-[40px] bg-cpd-divider rounded opacity-60" role="img" aria-label="Employer logo"></div>
-        <div class="flex-shrink-0 w-[130px] h-[40px] bg-cpd-divider rounded opacity-60" role="img" aria-label="Employer logo"></div>
-        <div class="flex-shrink-0 w-[110px] h-[40px] bg-cpd-divider rounded opacity-60" role="img" aria-label="Employer logo"></div>
+      <div class="logo-marquee flex items-center gap-14 lg:justify-center px-4">
+        <!-- Confirmed clients + placeholders — replace with real employer logo images -->
+        <div class="flex-shrink-0 flex items-center h-[40px] grayscale opacity-50 hover:opacity-80 transition-opacity" role="img" aria-label="Channel 4">
+          <svg viewBox="0 0 120 40" class="h-[36px] w-auto" fill="#374151">
+            <text x="0" y="28" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="22" letter-spacing="-0.5">Channel 4</text>
+          </svg>
+        </div>
+        <div class="flex-shrink-0 flex items-center h-[40px] grayscale opacity-50 hover:opacity-80 transition-opacity" role="img" aria-label="Ancient Brave">
+          <svg viewBox="0 0 160 40" class="h-[32px] w-auto" fill="#374151">
+            <text x="0" y="26" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="18" letter-spacing="1">ANCIENT BRAVE</text>
+          </svg>
+        </div>
+        <div class="flex-shrink-0 flex items-center h-[40px] grayscale opacity-50 hover:opacity-80 transition-opacity" role="img" aria-label="Employer logo">
+          <svg viewBox="0 0 120 40" class="h-[32px] w-auto" fill="#374151">
+            <text x="0" y="26" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="18" letter-spacing="0.5">ACME CO</text>
+          </svg>
+        </div>
+        <div class="flex-shrink-0 flex items-center h-[40px] grayscale opacity-50 hover:opacity-80 transition-opacity" role="img" aria-label="Employer logo">
+          <svg viewBox="0 0 130 40" class="h-[32px] w-auto" fill="#374151">
+            <text x="0" y="26" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="18" letter-spacing="0.5">DIGITECH</text>
+          </svg>
+        </div>
+        <div class="flex-shrink-0 flex items-center h-[40px] grayscale opacity-50 hover:opacity-80 transition-opacity" role="img" aria-label="Employer logo">
+          <svg viewBox="0 0 140 40" class="h-[32px] w-auto" fill="#374151">
+            <text x="0" y="26" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="18" letter-spacing="1.5">BRANDHAUS</text>
+          </svg>
+        </div>
+        <div class="flex-shrink-0 flex items-center h-[40px] grayscale opacity-50 hover:opacity-80 transition-opacity" role="img" aria-label="Employer logo">
+          <svg viewBox="0 0 120 40" class="h-[32px] w-auto" fill="#374151">
+            <text x="0" y="26" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="18" letter-spacing="0.5">NEXGEN</text>
+          </svg>
+        </div>
+        <!-- Duplicate set for seamless mobile marquee -->
+        <div class="flex-shrink-0 flex items-center h-[40px] grayscale opacity-50 lg:hidden" role="img" aria-label="Channel 4">
+          <svg viewBox="0 0 120 40" class="h-[36px] w-auto" fill="#374151">
+            <text x="0" y="28" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="22" letter-spacing="-0.5">Channel 4</text>
+          </svg>
+        </div>
+        <div class="flex-shrink-0 flex items-center h-[40px] grayscale opacity-50 lg:hidden" role="img" aria-label="Ancient Brave">
+          <svg viewBox="0 0 160 40" class="h-[32px] w-auto" fill="#374151">
+            <text x="0" y="26" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="18" letter-spacing="1">ANCIENT BRAVE</text>
+          </svg>
+        </div>
+        <div class="flex-shrink-0 flex items-center h-[40px] grayscale opacity-50 lg:hidden" role="img" aria-label="Employer logo">
+          <svg viewBox="0 0 120 40" class="h-[32px] w-auto" fill="#374151">
+            <text x="0" y="26" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="18" letter-spacing="0.5">ACME CO</text>
+          </svg>
+        </div>
+        <div class="flex-shrink-0 flex items-center h-[40px] grayscale opacity-50 lg:hidden" role="img" aria-label="Employer logo">
+          <svg viewBox="0 0 130 40" class="h-[32px] w-auto" fill="#374151">
+            <text x="0" y="26" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="18" letter-spacing="0.5">DIGITECH</text>
+          </svg>
+        </div>
+        <div class="flex-shrink-0 flex items-center h-[40px] grayscale opacity-50 lg:hidden" role="img" aria-label="Employer logo">
+          <svg viewBox="0 0 140 40" class="h-[32px] w-auto" fill="#374151">
+            <text x="0" y="26" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="18" letter-spacing="1.5">BRANDHAUS</text>
+          </svg>
+        </div>
+        <div class="flex-shrink-0 flex items-center h-[40px] grayscale opacity-50 lg:hidden" role="img" aria-label="Employer logo">
+          <svg viewBox="0 0 120 40" class="h-[32px] w-auto" fill="#374151">
+            <text x="0" y="26" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="18" letter-spacing="0.5">NEXGEN</text>
+          </svg>
+        </div>
       </div>
     </div>
   </section>
@@ -230,17 +291,24 @@
   <!-- ============================================
        SECTION 4 — WHY CPD (Three Columns)
        ============================================ -->
-  <section id="why-cpd" class="py-20 lg:py-28" aria-labelledby="why-cpd-heading">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 id="why-cpd-heading" class="font-heading font-bold text-cpd-heading text-3xl lg:text-4xl text-center mb-14">
-        Everything your business needs
-      </h2>
+  <section id="why-cpd" class="py-20 lg:py-28 relative overflow-hidden" aria-labelledby="why-cpd-heading">
+    <!-- Subtle background decoration -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-cpd-blue/[0.02] rounded-full blur-3xl"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span class="inline-block text-cpd-blue font-semibold text-sm tracking-wide uppercase mb-3">Why choose CPD</span>
+        <h2 id="why-cpd-heading" class="font-heading font-bold text-cpd-heading text-3xl lg:text-4xl">
+          Everything your business needs
+        </h2>
+      </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Card 1: Funding -->
-        <div class="bg-white border border-cpd-divider rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-cpd-lightblue rounded-xl flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-cpd-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+        <div class="group bg-white border border-cpd-divider rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cpd-blue to-cpd-blue/50 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+          <div class="w-14 h-14 bg-gradient-to-br from-cpd-lightblue to-cpd-blue/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-cpd-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
           </div>
@@ -251,9 +319,10 @@
         </div>
 
         <!-- Card 2: Hire or Upskill -->
-        <div class="bg-white border border-cpd-divider rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-cpd-lightblue rounded-xl flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-cpd-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+        <div class="group bg-white border border-cpd-divider rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cpd-amber to-cpd-amber/50 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+          <div class="w-14 h-14 bg-gradient-to-br from-cpd-lightblue to-cpd-blue/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-cpd-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/>
             </svg>
           </div>
@@ -264,9 +333,10 @@
         </div>
 
         <!-- Card 3: Results -->
-        <div class="bg-white border border-cpd-divider rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-cpd-lightblue rounded-xl flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-cpd-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+        <div class="group bg-white border border-cpd-divider rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cpd-blue to-cpd-amber scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+          <div class="w-14 h-14 bg-gradient-to-br from-cpd-lightblue to-cpd-blue/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-cpd-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/>
             </svg>
           </div>
@@ -293,20 +363,15 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
         <!-- Programme Card 1 -->
-        <div class="programme-card group bg-white border border-cpd-divider rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <div class="programme-card group bg-white border border-cpd-divider rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
           <div class="aspect-[4/3] bg-cpd-lightblue overflow-hidden">
-            <!-- Replace with actual programme image -->
-            <div class="w-full h-full bg-gradient-to-br from-cpd-lightblue to-cpd-blue/10 flex items-center justify-center">
-              <svg class="w-16 h-16 text-cpd-blue/30" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/>
-              </svg>
-            </div>
+            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&q=80&auto=format" alt="Digital marketing team planning a campaign" width="600" height="450" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
           </div>
           <div class="p-6">
             <span class="inline-block bg-cpd-amber/15 text-cpd-amber text-xs font-bold px-3 py-1 rounded-full mb-3">Level 3</span>
-            <h3 class="font-heading font-bold text-cpd-heading text-lg mb-2">AI Digital Marketing</h3>
-            <p class="text-body text-[15px] mb-4">Master AI-driven marketing strategies, from content creation to campaign analytics.</p>
-            <a href="/programmes/ai-digital-marketing" class="programme-link inline-flex items-center text-cpd-blue font-semibold text-[15px] group-hover:underline" data-programme="AI Digital Marketing Level 3">
+            <h3 class="font-heading font-bold text-cpd-heading text-lg mb-2">Digital Marketing</h3>
+            <p class="text-body text-[15px] mb-4">Learn to plan, execute, and measure digital marketing campaigns across SEO, social media, email, and paid channels.</p>
+            <a href="/programmes/digital-marketing" class="programme-link inline-flex items-center text-cpd-blue font-semibold text-[15px] group-hover:underline" data-programme="Digital Marketing Level 3">
               Learn more
               <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
@@ -316,19 +381,14 @@
         </div>
 
         <!-- Programme Card 2 -->
-        <div class="programme-card group bg-white border border-cpd-divider rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <div class="programme-card group bg-white border border-cpd-divider rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
           <div class="aspect-[4/3] bg-cpd-lightblue overflow-hidden">
-            <div class="w-full h-full bg-gradient-to-br from-cpd-lightblue to-cpd-blue/10 flex items-center justify-center">
-              <svg class="w-16 h-16 text-cpd-blue/30" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z"/>
-                <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z"/>
-              </svg>
-            </div>
+            <img src="https://images.unsplash.com/photo-1616587226157-48e49175ee20?w=600&q=80&auto=format" alt="Content creator filming video with professional setup" width="600" height="450" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
           </div>
           <div class="p-6">
             <span class="inline-block bg-cpd-amber/15 text-cpd-amber text-xs font-bold px-3 py-1 rounded-full mb-3">Level 3</span>
             <h3 class="font-heading font-bold text-cpd-heading text-lg mb-2">Content Creator</h3>
-            <p class="text-body text-[15px] mb-4">Develop skills in video, social media, and multimedia content production.</p>
+            <p class="text-body text-[15px] mb-4">Create compelling content across video, social media, and digital platforms. Learn storytelling, production, and distribution.</p>
             <a href="/programmes/content-creator" class="programme-link inline-flex items-center text-cpd-blue font-semibold text-[15px] group-hover:underline" data-programme="Content Creator Level 3">
               Learn more
               <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
@@ -339,18 +399,14 @@
         </div>
 
         <!-- Programme Card 3 -->
-        <div class="programme-card group bg-white border border-cpd-divider rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <div class="programme-card group bg-white border border-cpd-divider rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
           <div class="aspect-[4/3] bg-cpd-lightblue overflow-hidden">
-            <div class="w-full h-full bg-gradient-to-br from-cpd-lightblue to-cpd-blue/10 flex items-center justify-center">
-              <svg class="w-16 h-16 text-cpd-blue/30" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
-              </svg>
-            </div>
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80&auto=format" alt="Diverse group of young professionals in digital skills workshop" width="600" height="450" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
           </div>
           <div class="p-6">
             <span class="inline-block bg-cpd-amber/15 text-cpd-amber text-xs font-bold px-3 py-1 rounded-full mb-3">Level 2</span>
             <h3 class="font-heading font-bold text-cpd-heading text-lg mb-2">Digital Accelerator</h3>
-            <p class="text-body text-[15px] mb-4">Fast-track digital skills for career changers and new starters entering the industry.</p>
+            <p class="text-body text-[15px] mb-4">Fast-track into digital with essential skills in data, project support, and digital tools used across every industry.</p>
             <a href="/programmes/digital-accelerator" class="programme-link inline-flex items-center text-cpd-blue font-semibold text-[15px] group-hover:underline" data-programme="Digital Accelerator Level 2">
               Learn more
               <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
@@ -381,33 +437,41 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 mb-14">
         <!-- Step 1 -->
-        <div class="relative text-center lg:text-left">
-          <div class="text-cpd-blue/20 font-heading font-extrabold text-6xl mb-4">01</div>
+        <div class="relative text-center">
+          <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-5 shadow-md border-2 border-cpd-blue/10">
+            <span class="text-cpd-blue font-heading font-extrabold text-xl">01</span>
+          </div>
           <!-- Connector line (desktop only) -->
-          <div class="hidden lg:block absolute top-8 left-[calc(100%_-_12px)] w-[calc(100%_-_48px)] border-t-2 border-dashed border-cpd-blue/20"></div>
+          <div class="hidden lg:block absolute top-8 left-[calc(50%_+_40px)] w-[calc(100%_-_80px)] border-t-2 border-dashed border-cpd-blue/20"></div>
           <h3 class="font-heading font-bold text-cpd-heading text-lg mb-2">Talk to us</h3>
           <p class="text-body text-[15px]">Book a free call. We learn about your team and your goals.</p>
         </div>
 
         <!-- Step 2 -->
-        <div class="relative text-center lg:text-left">
-          <div class="text-cpd-blue/20 font-heading font-extrabold text-6xl mb-4">02</div>
-          <div class="hidden lg:block absolute top-8 left-[calc(100%_-_12px)] w-[calc(100%_-_48px)] border-t-2 border-dashed border-cpd-blue/20"></div>
+        <div class="relative text-center">
+          <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-5 shadow-md border-2 border-cpd-blue/10">
+            <span class="text-cpd-blue font-heading font-extrabold text-xl">02</span>
+          </div>
+          <div class="hidden lg:block absolute top-8 left-[calc(50%_+_40px)] w-[calc(100%_-_80px)] border-t-2 border-dashed border-cpd-blue/20"></div>
           <h3 class="font-heading font-bold text-cpd-heading text-lg mb-2">We find the talent</h3>
           <p class="text-body text-[15px]">We recruit and pre-screen candidates, or identify the right people in your existing team.</p>
         </div>
 
         <!-- Step 3 -->
-        <div class="relative text-center lg:text-left">
-          <div class="text-cpd-blue/20 font-heading font-extrabold text-6xl mb-4">03</div>
-          <div class="hidden lg:block absolute top-8 left-[calc(100%_-_12px)] w-[calc(100%_-_48px)] border-t-2 border-dashed border-cpd-blue/20"></div>
+        <div class="relative text-center">
+          <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-5 shadow-md border-2 border-cpd-blue/10">
+            <span class="text-cpd-blue font-heading font-extrabold text-xl">03</span>
+          </div>
+          <div class="hidden lg:block absolute top-8 left-[calc(50%_+_40px)] w-[calc(100%_-_80px)] border-t-2 border-dashed border-cpd-blue/20"></div>
           <h3 class="font-heading font-bold text-cpd-heading text-lg mb-2">Training begins</h3>
           <p class="text-body text-[15px]">Your apprentice starts their programme. Fully funded — no cost to you.</p>
         </div>
 
         <!-- Step 4 -->
-        <div class="relative text-center lg:text-left">
-          <div class="text-cpd-blue/20 font-heading font-extrabold text-6xl mb-4">04</div>
+        <div class="relative text-center">
+          <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-5 shadow-md border-2 border-cpd-blue/10">
+            <span class="text-cpd-blue font-heading font-extrabold text-xl">04</span>
+          </div>
           <h3 class="font-heading font-bold text-cpd-heading text-lg mb-2">Your team grows</h3>
           <p class="text-body text-[15px]">92% of our apprentices stay on. You gain a qualified digital professional.</p>
         </div>
@@ -425,11 +489,19 @@
   <!-- ============================================
        SECTION 7 — TESTIMONIALS
        ============================================ -->
-  <section id="testimonials" class="py-20 lg:py-28" aria-labelledby="testimonials-heading">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 id="testimonials-heading" class="font-heading font-bold text-cpd-heading text-3xl lg:text-4xl mb-12">
-        What our employers say
-      </h2>
+  <section id="testimonials" class="py-20 lg:py-28 relative overflow-hidden" aria-labelledby="testimonials-heading">
+    <!-- Background texture -->
+    <div class="absolute inset-0 bg-gradient-to-br from-white via-cpd-lightblue/30 to-white"></div>
+    <div class="absolute top-[-200px] right-[-100px] w-[500px] h-[500px] bg-cpd-blue/[0.03] rounded-full"></div>
+    <div class="absolute bottom-[-150px] left-[-50px] w-[400px] h-[400px] bg-cpd-amber/[0.03] rounded-full"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-12">
+        <span class="inline-block text-cpd-blue font-semibold text-sm tracking-wide uppercase mb-3">Testimonials</span>
+        <h2 id="testimonials-heading" class="font-heading font-bold text-cpd-heading text-3xl lg:text-4xl">
+          What our employers say
+        </h2>
+      </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
         <!-- Testimonial 1 -->
@@ -441,9 +513,8 @@
             "The whole process was seamless. CPD found us a brilliant apprentice and handled everything. We barely had to lift a finger."
           </p>
           <div class="flex items-center gap-4">
-            <div class="w-14 h-14 bg-cpd-lightblue rounded-full flex items-center justify-center flex-shrink-0">
-              <span class="font-heading font-bold text-cpd-blue text-lg">SM</span>
-              <!-- Replace with: <img src="assets/images/testimonial-1.webp" alt="Sarah M." width="56" height="56" class="rounded-full object-cover" loading="lazy"> -->
+            <div class="w-14 h-14 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-cpd-blue/20">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=112&h=112&q=80&auto=format&fit=crop" alt="Sarah M." width="56" height="56" class="w-full h-full object-cover" loading="lazy">
             </div>
             <div>
               <div class="font-heading font-bold text-cpd-heading">Sarah M.</div>
@@ -461,9 +532,8 @@
             "We've now put three members of staff through CPD programmes. The quality of training is genuinely impressive, and the retention speaks for itself."
           </p>
           <div class="flex items-center gap-4">
-            <div class="w-14 h-14 bg-cpd-lightblue rounded-full flex items-center justify-center flex-shrink-0">
-              <span class="font-heading font-bold text-cpd-blue text-lg">JR</span>
-              <!-- Replace with: <img src="assets/images/testimonial-2.webp" alt="James R." width="56" height="56" class="rounded-full object-cover" loading="lazy"> -->
+            <div class="w-14 h-14 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-cpd-blue/20">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=112&h=112&q=80&auto=format&fit=crop" alt="James R." width="56" height="56" class="w-full h-full object-cover" loading="lazy">
             </div>
             <div>
               <div class="font-heading font-bold text-cpd-heading">James R.</div>
@@ -485,8 +555,15 @@
   <!-- ============================================
        SECTION 8 — FINAL CTA BLOCK
        ============================================ -->
-  <section id="final-cta" class="py-20 lg:py-28 bg-cpd-navy" aria-labelledby="final-cta-heading">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+  <section id="final-cta" class="py-20 lg:py-28 bg-cpd-navy relative overflow-hidden" aria-labelledby="final-cta-heading">
+    <!-- Decorative background elements -->
+    <div class="absolute top-0 left-0 w-full h-full">
+      <div class="absolute top-[-100px] left-[-100px] w-[400px] h-[400px] bg-cpd-blue/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-[-150px] right-[-100px] w-[500px] h-[500px] bg-cpd-blue/5 rounded-full blur-3xl"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/[0.03] rounded-full"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] border border-white/[0.03] rounded-full"></div>
+    </div>
+    <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 id="final-cta-heading" class="font-heading font-bold text-white text-3xl lg:text-4xl mb-5">
         Ready to build your digital team?
       </h2>
@@ -521,7 +598,7 @@
         <div>
           <h3 class="font-heading font-semibold text-white text-sm uppercase tracking-wider mb-4">Programmes</h3>
           <ul class="space-y-2.5">
-            <li><a href="/programmes/ai-digital-marketing" class="text-white/60 text-[15px] hover:text-white transition-colors">AI Digital Marketing</a></li>
+            <li><a href="/programmes/digital-marketing" class="text-white/60 text-[15px] hover:text-white transition-colors">Digital Marketing</a></li>
             <li><a href="/programmes/content-creator" class="text-white/60 text-[15px] hover:text-white transition-colors">Content Creator</a></li>
             <li><a href="/programmes/digital-accelerator" class="text-white/60 text-[15px] hover:text-white transition-colors">Digital Accelerator</a></li>
             <li><a href="/programmes" class="text-white/60 text-[15px] hover:text-white transition-colors">View All Programmes</a></li>

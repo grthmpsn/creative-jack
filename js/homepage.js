@@ -7,6 +7,63 @@
   'use strict';
 
   // =========================================
+  // 0. HERO VIDEO — hide poster once playing
+  // =========================================
+  var heroVideo = document.getElementById('hero-video');
+  var heroPoster = document.getElementById('hero-poster');
+  if (heroVideo && heroPoster) {
+    heroVideo.addEventListener('playing', function () {
+      heroVideo.classList.add('is-playing');
+      heroPoster.style.opacity = '0';
+      heroPoster.style.transition = 'opacity 1.5s ease';
+    });
+  }
+
+  // =========================================
+  // 0B. ROTATING HERO WORD — typewriter effect
+  // =========================================
+  var rotatingEl = document.getElementById('rotating-word');
+  if (rotatingEl) {
+    var words = ['digital', 'marketing', 'operations', 'development', 'technical'];
+    var wordIndex = 0;
+    var charIndex = 0;
+    var isDeleting = false;
+    var typeSpeed = 100;
+    var deleteSpeed = 60;
+    var pauseAfterType = 2000;
+    var pauseAfterDelete = 400;
+
+    function typeWord() {
+      var currentWord = words[wordIndex];
+
+      if (!isDeleting) {
+        charIndex++;
+        rotatingEl.textContent = currentWord.substring(0, charIndex);
+
+        if (charIndex === currentWord.length) {
+          isDeleting = true;
+          setTimeout(typeWord, pauseAfterType);
+          return;
+        }
+        setTimeout(typeWord, typeSpeed);
+      } else {
+        charIndex--;
+        rotatingEl.textContent = currentWord.substring(0, charIndex);
+
+        if (charIndex === 0) {
+          isDeleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+          setTimeout(typeWord, pauseAfterDelete);
+          return;
+        }
+        setTimeout(typeWord, deleteSpeed);
+      }
+    }
+
+    typeWord();
+  }
+
+  // =========================================
   // 1. MOBILE MENU
   // =========================================
   const menuBtn = document.getElementById('mobile-menu-btn');
