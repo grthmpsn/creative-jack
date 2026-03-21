@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none">
+  <!-- Direction A: Clean Wordmark -->
+  <!-- "Creative Process" in Plus Jakarta Sans weight 800, "Digital" in weight 600 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;800');
+  </style>
+  <!-- Main wordmark -->
+  <text x="0" y="38" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="30" fill="#0D1B2A" letter-spacing="-0.5">Creative Process</text>
+  <text x="0" y="62" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="22" fill="#1565C0" letter-spacing="3">DIGITAL</text>
+  <!-- Accent bar under "Creative Process" -->
+  <rect x="0" y="43" width="48" height="3" rx="1.5" fill="#F59E0B"/>
+</svg>

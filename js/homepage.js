@@ -24,7 +24,7 @@
   // =========================================
   var rotatingEl = document.getElementById('rotating-word');
   if (rotatingEl) {
-    var words = ['digital', 'marketing', 'operations', 'development', 'technical'];
+    var words = ['digital', 'marketing', 'operational', 'development', 'technical'];
     var wordIndex = 0;
     var charIndex = 0;
     var isDeleting = false;
