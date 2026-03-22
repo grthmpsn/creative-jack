@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 52" fill="none">
+  <!-- Option 9: Spaced Type — wider letter spacing for a premium feel -->
+  <polygon points="8,52 0,8 140,0 148,44" fill="#1565C0"/>
+  <line x1="98" y1="6" x2="98" y2="46" stroke="white" stroke-width="1.5" opacity="0.5"/>
+  <text x="14" y="26" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="500" font-size="14" fill="white" letter-spacing="2.5">creative</text>
+  <text x="14" y="43" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="500" font-size="14" fill="white" letter-spacing="2.5">process</text>
+</svg>

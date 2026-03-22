@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 52" fill="none">
+  <!-- Option 5: No Line — cleaner, minimal, no vertical accent -->
+  <polygon points="8,52 0,8 140,0 148,44" fill="#1565C0"/>
+  <text x="22" y="26" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="600" font-size="15" fill="white" letter-spacing="0.5">creative</text>
+  <text x="22" y="43" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="600" font-size="15" fill="white" letter-spacing="0.5">process</text>
+</svg>
